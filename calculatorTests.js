@@ -2,7 +2,7 @@
  * spec.js 
  */
 
-var CalculatorHomePage = require('./PageObjects/calculatorPageObject.js');
+var CalculatorHomePage = require('./pageObjects/calculatorPageObject.js');
 
 describe('Angular Calculator Test Suite', function(){
 	var calculatorHomePage;

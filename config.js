@@ -10,6 +10,6 @@ exports.config = {
 			jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({savePath:'evidence'}))
 		},
 		seleniumAddress: 'http:localhost:4444/wd/hub',
-		specs: ['spec.js'],
+		specs: ['calculatorTests.js'],
 		directConnect: true //This line is to avoid manually starting the webdriver server
 }
