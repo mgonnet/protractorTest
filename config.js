@@ -11,5 +11,5 @@ exports.config = {
 		},
 		seleniumAddress: 'http:localhost:4444/wd/hub',
 		specs: ['spec.js'],
-		directConnect: true
+		directConnect: true //This line is to avoid manually starting the webdriver server
 }

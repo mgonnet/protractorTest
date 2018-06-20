@@ -69,3 +69,9 @@ describe('Angular Calculator Test Suite', function(){
 	})
 		
 })
+
+xdescribe('Skipped test suite', function(){
+	it('true to be true', function(){
+		expect(true).toBe(true);
+	})
+})
