@@ -1,0 +1,15 @@
+[
+	{
+		"FirstNumber"	: "40",
+		"SecondNumber"	: "30",
+		"Operation"		: "ADDITION",
+		"Result"		: "70"
+	},
+	
+	{
+		"FirstNumber"	: "40",
+		"SecondNumber"	: "30",
+		"Operation"		: "MULTIPLICATION",
+		"Result"		: "1200"
+	}
+]

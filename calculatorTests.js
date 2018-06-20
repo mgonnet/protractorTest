@@ -53,6 +53,16 @@ describe('Angular Calculator Test Suite', function(){
 		//This spec is skipped because it starts with x
 		expect(true).toBe(true);
 	})
+	
+	it('Calculator operation test using external data from json', function(){
+		var data = require("./calculatorTestData.json");
+		
+		data.forEach(function(dataElement){
+			calculatorHomePage.operate(dataElement.FirstNumber,dataElement.SecondNumber,dataElement.Operation);
+			
+			expect(calculatorHomePage.getResult()).toEqual(dataElement.Result);
+		})
+	})
 		
 })
 
