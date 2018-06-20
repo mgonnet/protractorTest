@@ -1,0 +1,17 @@
+{
+  "ecmaVersion": 5,
+  "plugins": {
+    "jasmine": {
+      
+    },
+    "jscs": {
+      
+    },
+    "protractor": {
+      
+    }
+  },
+  "libs": [
+    "browser"
+  ]
+}
