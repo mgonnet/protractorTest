@@ -13,6 +13,7 @@ var CalculatorHomePage = function(){
 	
 	var valuesMemory = element.all(by.repeater('result in memory').column('result.value'));
 	var operatorsMemory = element.all(by.repeater('result in memory').column('result.operator'));
+	var dateMemory = element.all(by.repeater('result in memory').column('result.timestamp'));
 	
 	this.get = function(){
 		browser.get('http://www.way2automation.com/angularjs-protractor/calc/');
@@ -43,6 +44,10 @@ var CalculatorHomePage = function(){
 	
 	this.getOperatorsMemorySize = function(){
 		return operatorsMemory.count();
+	}
+	
+	this.getDateMemory = function(){
+		return dateMemory.getText();
 	}
 	
 }
