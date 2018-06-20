@@ -26,7 +26,7 @@ describe('Angular Calculator Test Suite', function(){
 		expect(calculatorHomePage.getResult()).toEqual('2');
 	})
 	
-	it('Calculator memory test with two results', function(){
+	it('Calculator results memory test with two results', function(){
 		var calculatorHomePage = new CalculatorHomePage();
 		
 		calculatorHomePage.get();
@@ -34,8 +34,21 @@ describe('Angular Calculator Test Suite', function(){
 		calculatorHomePage.operate('1','2','ADDITION');
 		calculatorHomePage.operate('1','2','MULTIPLICATION');
 		
-		expect(calculatorHomePage.getResultsValueMemory()).toEqual(['2', '3']);		
-		expect(calculatorHomePage.getMemorySize()).toEqual(2);
+		expect(calculatorHomePage.getValuesMemory()).toEqual(['2', '3']);		
+		expect(calculatorHomePage.getValuesMemorySize()).toEqual(2);
 	})
 	
+	it('Calculator operations memory test with three results', function(){
+		var calculatorHomePage = new CalculatorHomePage();
+		
+		calculatorHomePage.get();
+		
+		calculatorHomePage.operate('1','2','ADDITION');
+		calculatorHomePage.operate('1','2','MULTIPLICATION');
+		calculatorHomePage.operate('1','2','DIVISION');
+		
+		expect(calculatorHomePage.getOperatorsMemory()).toEqual(['/', '*', '+']);		
+		expect(calculatorHomePage.getOperatorsMemorySize()).toEqual(3);
+	})
+		
 })

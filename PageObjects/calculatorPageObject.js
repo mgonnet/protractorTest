@@ -11,7 +11,8 @@ var CalculatorHomePage = function(){
 	var calculateElement = element(by.id('gobutton'));
 	var resultElement = element(by.css('.ng-binding'));	
 	
-	var resultsValueMemory = element.all(by.repeater('result in memory').column('result.value'));
+	var valuesMemory = element.all(by.repeater('result in memory').column('result.value'));
+	var operatorsMemory = element.all(by.repeater('result in memory').column('result.operator'));
 	
 	this.get = function(){
 		browser.get('http://www.way2automation.com/angularjs-protractor/calc/');
@@ -28,12 +29,20 @@ var CalculatorHomePage = function(){
 		return resultElement.getText();
 	}
 	
-	this.getResultsValueMemory = function(){
-		return resultsValueMemory.getText();
+	this.getValuesMemory = function(){
+		return valuesMemory.getText();
 	}	
 	
-	this.getMemorySize = function(){
-		return resultsValueMemory.count();
+	this.getValuesMemorySize = function(){
+		return valuesMemory.count();
+	}
+	
+	this.getOperatorsMemory = function(){
+		return operatorsMemory.getText();
+	}
+	
+	this.getOperatorsMemorySize = function(){
+		return operatorsMemory.count();
 	}
 	
 }
