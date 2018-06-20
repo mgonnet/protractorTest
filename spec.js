@@ -5,32 +5,26 @@
 var CalculatorHomePage = require('./PageObjects/calculatorPageObject.js');
 
 describe('Angular Calculator Test Suite', function(){
+	var calculatorHomePage;
+	
+	beforeEach(function(){
+		calculatorHomePage = new CalculatorHomePage();
+		calculatorHomePage.get();
+	})
 	
 	it('Calculator addition test', function(){
-		var calculatorHomePage = new CalculatorHomePage();
-		
-		calculatorHomePage.get();			
-		
 		calculatorHomePage.operate('1','2','ADDITION');
 		
 		expect(calculatorHomePage.getResult()).toEqual('3');
 	})
 	
 	it('Calculator multiplication test', function(){
-		var calculatorHomePage = new CalculatorHomePage();
-		
-		calculatorHomePage.get();			
-		
-		calculatorHomePage.operate('1','2','MULTIPLICATION');
+		calculatorHomePage.operate('1','2','MULTIPLICATION');	
 		
 		expect(calculatorHomePage.getResult()).toEqual('2');
 	})
 	
-	it('Calculator results memory test with two results', function(){
-		var calculatorHomePage = new CalculatorHomePage();
-		
-		calculatorHomePage.get();
-		
+	it('Calculator results memory test with two results', function(){	
 		calculatorHomePage.operate('1','2','ADDITION');
 		calculatorHomePage.operate('1','2','MULTIPLICATION');
 		
@@ -39,10 +33,6 @@ describe('Angular Calculator Test Suite', function(){
 	})
 	
 	it('Calculator operations memory test with three results', function(){
-		var calculatorHomePage = new CalculatorHomePage();
-		
-		calculatorHomePage.get();
-		
 		calculatorHomePage.operate('1','2','ADDITION');
 		calculatorHomePage.operate('1','2','MULTIPLICATION');
 		calculatorHomePage.operate('1','2','DIVISION');
@@ -52,10 +42,6 @@ describe('Angular Calculator Test Suite', function(){
 	})
 	
 	it('Calculator memory records operation date', function(){
-		var calculatorHomePage = new CalculatorHomePage();
-		
-		calculatorHomePage.get();
-		
 		calculatorHomePage.operate('1','2','ADDITION');
 		
 		calculatorHomePage.getDateMemory().then(function (dateMemory){
