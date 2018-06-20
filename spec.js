@@ -60,8 +60,12 @@ describe('Angular Calculator Test Suite', function(){
 		
 		calculatorHomePage.getDateMemory().then(function (dateMemory){
 			expect(dateMemory[0]).toMatch(/\d{1,2}:\d{1,2}:\d{1,2} (?:AM|PM)/);
-		});
-		
+		});		
+	})
+	
+	xit('Skipped spec',function(){
+		//This spec is skipped because it starts with x
+		expect(true).toBe(true);
 	})
 		
 })
