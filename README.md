@@ -1,9 +1,11 @@
-## protractorTest
+# protractorTest
 
 #Instalation
 
 install node.js
+
 npm install –g protractor
+
 web-driver-manager update
 
 Reference: 
