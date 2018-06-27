@@ -2,7 +2,7 @@
  * 
  */
 
-var CheckboxesHomePage = require('./pageObjects/checkboxesPageObject.js');
+var CheckboxesHomePage = require('../pageObjects/checkboxesPageObject.js');
 
 describe('Angular checkboxes page Test Suite', function(){
 	var checkboxesHomePage;

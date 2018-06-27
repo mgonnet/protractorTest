@@ -2,7 +2,7 @@
  * spec.js 
  */
 
-var CalculatorHomePage = require('./pageObjects/calculatorPageObject.js');
+var CalculatorHomePage = require('../pageObjects/calculatorPageObject.js');
 
 describe('Angular Calculator Test Suite', function(){
 	var calculatorHomePage;
@@ -55,7 +55,7 @@ describe('Angular Calculator Test Suite', function(){
 	})
 	
 	it('Calculator operation test using external data from json', function(){
-		var data = require("./calculatorTestData.json");
+		var data = require("../data/calculatorTestData.json");
 		
 		data.forEach(function(dataElement){
 			calculatorHomePage.operate(dataElement.FirstNumber,dataElement.SecondNumber,dataElement.Operation);
