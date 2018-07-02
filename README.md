@@ -11,9 +11,6 @@ web-driver-manager update
 //Install cucumber
 npm install -g cucumber
 
-//Install protractor-cucumber framework
-npm install --save-dev protractor-cucumber-framework
-
 Reference: 
   https://github.com/angular/protractor/blob/master/docs/toc.md
   
