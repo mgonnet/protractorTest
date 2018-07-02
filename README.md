@@ -8,10 +8,12 @@ npm install –g protractor
 
 web-driver-manager update
 
-//Install cucumber
-npm install -g cucumber
-
 Reference: 
   https://github.com/angular/protractor/blob/master/docs/toc.md
   
   https://blh0021.gitbooks.io/protractor-learn-testing-angular/checkboxes.html
+
+
+# Run
+
+protractor local.config.js
